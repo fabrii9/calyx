@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="stock_picking_inherit_custom" model="ir.ui.view">
+        <field name="name">stock.picking.inherit.custom</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/> <!-- id externo en bichito-->
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_deadline']" position="before">
+                <field name="distpacher"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
